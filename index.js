@@ -11,3 +11,19 @@ function nowServing(currLine) {
     return `Currently serving ${firstPerson}.`;
   }
 }
+
+function currentLine(currLine) {
+  if (currLine.length === 0) {
+    return "The line is currently empty.";
+  } else {
+    let out = "The line is currently: ";
+    let people = "";
+    for (let i=0; i < currLine.length; i++) {
+      if (!people.length === 0) {
+        people = people + ", ";
+      }
+      people = `${i+1}. ${currLine[i]}`;
+      out = out + people;
+    }
+  }
+}
