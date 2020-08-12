@@ -17,13 +17,12 @@ function currentLine(currLine) {
     return "The line is currently empty.";
   } else {
     let out = "The line is currently: ";
-    let people = "";
+    let numAndPeople = [];
     let j = 1;
     for (let i=0; i < currLine.length; i++) {
-      people = `${j}. ${currLine[i]}, `;
-      out = out + people;
+      numAndPeople.push(`${j}. ${currLine[i]}`);
       j++;
     }
-    return out;
+    return out + numAndPeople.join(", ");
   }
 }
