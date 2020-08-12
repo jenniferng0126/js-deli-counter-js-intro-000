@@ -20,10 +20,7 @@ function currentLine(currLine) {
     let people = "";
     let j = 1;
     for (let i=0; i < currLine.length; i++) {
-      if (!currLine[i]) {
-        people = people + ", ";
-      }
-      people = `${j}. ${currLine[i]}`;
+      people = `${j}. ${currLine[i]}, `;
       out = out + people;
       j++;
     }
