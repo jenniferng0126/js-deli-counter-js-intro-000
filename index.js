@@ -18,12 +18,15 @@ function currentLine(currLine) {
   } else {
     let out = "The line is currently: ";
     let people = "";
+    let j = 1;
     for (let i=0; i < currLine.length; i++) {
       if (!people.length === 0) {
         people = people + ", ";
       }
-      people = `${i+1}. ${currLine[i]}`;
+      people = `${j}. ${currLine[i]}`;
       out = out + people;
+      j++;
     }
+    return out;
   }
 }
